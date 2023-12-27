@@ -1,13 +1,26 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.5fbf2996.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.f160687d.js",
+    "static/js/921.2f07f194.chunk.js": "/goit-react-hw-08-phonebook/static/js/921.2f07f194.chunk.js",
+    "static/js/848.01598e7e.chunk.js": "/goit-react-hw-08-phonebook/static/js/848.01598e7e.chunk.js",
+    "static/js/505.94496a87.chunk.js": "/goit-react-hw-08-phonebook/static/js/505.94496a87.chunk.js",
+    "static/js/278.e1f63596.chunk.js": "/goit-react-hw-08-phonebook/static/js/278.e1f63596.chunk.js",
+    "static/js/896.6cbfe698.chunk.js": "/goit-react-hw-08-phonebook/static/js/896.6cbfe698.chunk.js",
+    "static/media/hero.jpg": "/goit-react-hw-08-phonebook/static/media/hero.c148a75c90c7ff1b8eda.jpg",
+    "static/media/contacts.jpg": "/goit-react-hw-08-phonebook/static/media/contacts.812b053e5490354a0408.jpg",
+    "static/media/avatar.png": "/goit-react-hw-08-phonebook/static/media/avatar.a103cc81f667a78f3ef9.png",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.7acaea2f.css.map": "/goit-react-hw-08-phonebook/static/css/main.7acaea2f.css.map",
-    "main.5fbf2996.js.map": "/goit-react-hw-08-phonebook/static/js/main.5fbf2996.js.map"
+    "main.f160687d.js.map": "/goit-react-hw-08-phonebook/static/js/main.f160687d.js.map",
+    "921.2f07f194.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/921.2f07f194.chunk.js.map",
+    "848.01598e7e.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/848.01598e7e.chunk.js.map",
+    "505.94496a87.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/505.94496a87.chunk.js.map",
+    "278.e1f63596.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/278.e1f63596.chunk.js.map",
+    "896.6cbfe698.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/896.6cbfe698.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.5fbf2996.js"
+    "static/js/main.f160687d.js"
   ]
 }
