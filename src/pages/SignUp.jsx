@@ -1,17 +1,9 @@
 import * as React from 'react';
-import {
-  Avatar,
-  Button,
-  Container,
-  Typography,
-  CssBaseline,
-  TextField,
-  Box,
-} from '@mui/material';
+import { Avatar, Button, Container, Typography, CssBaseline, TextField, Box } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { postUserThunk } from 'services/fetchAuth';
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { postUserThunk } from "services/fetchAuth";
 import { avatarStyle, boxBottomFStyle, boxFormStyle } from './StylePages';
 import { StyledNavLink } from 'components/Navigation/StyleNav';
 
@@ -21,7 +13,7 @@ export default function SignUp() {
   const [password, setPassword] = useState('');
   const dispatch = useDispatch();
 
-  const onChangeInput = event => {
+  const onChangeInput = (event) => {
     const { name, value } = event.currentTarget;
 
     switch (name) {
@@ -34,16 +26,17 @@ export default function SignUp() {
       case 'password':
         setPassword(value);
         break;
-
+            
       default:
         break;
     }
-  };
-  const onSubmitUser = event => {
+  }
+
+  const onSubmitUser = (event) => {
     event.preventDefault();
     const newUser = { name, email, password };
     dispatch(postUserThunk(newUser));
-  };
+  }
 
   return (
     <Container component="main" maxWidth="xs">
@@ -59,10 +52,7 @@ export default function SignUp() {
           <TextField
             margin="normal"
             helperText="The name must contain only letters, apostrophes, hyphens and indents."
-            inputProps={{
-              inputMode: 'text',
-              pattern: '^[a-zA-Zа-яА-Я]+(([a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$',
-            }}
+            inputProps={{ inputMode: 'text', pattern: "^[a-zA-Zа-яА-Я]+(([a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$" }}
             autoComplete="name"
             name="name"
             value={name}
@@ -91,7 +81,7 @@ export default function SignUp() {
           <TextField
             margin="normal"
             required
-            helperText="The password must contain at least 7 characters"
+            helperText='The password must contain at least 7 characters'
             fullWidth
             // inputProps={{ inputMode: 'email', pattern: "^[a-zA-Z0-9!@#$%^&*()-_=+`~{}|:<>/?]+$" }}
             type="password"
@@ -112,12 +102,10 @@ export default function SignUp() {
             Sign Up
           </Button>
           <Box sx={boxBottomFStyle}>
-            <StyledNavLink to="/login">
-              Already have an account? Sign in
-            </StyledNavLink>
+            <StyledNavLink to="/login">Already have an account? Sign in</StyledNavLink>
           </Box>
         </Box>
       </Box>
     </Container>
   );
-}
+};

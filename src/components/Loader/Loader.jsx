@@ -1,9 +1,4 @@
-import {
-  Circles,
-  MagnifyingGlass,
-  Hourglass,
-  ThreeCircles,
-} from 'react-loader-spinner';
+import { Circles, MagnifyingGlass, Hourglass, ThreeCircles } from  'react-loader-spinner'
 import { Box } from '@mui/material';
 import { boxFormStyle } from 'pages/StylePages';
 import { boxLoaderStyle } from './StyleLoaders';
@@ -25,20 +20,19 @@ export const IsCurrentUserLoader = () => (
   </Box>
 );
 
-export const Loader = () => (
-  <Box sx={boxFormStyle}>
+export const Loader = () =>
+(<Box sx={boxFormStyle}>
     <MagnifyingGlass
-      visible={true}
-      height="100"
-      width="100"
-      ariaLabel="MagnifyingGlass-loading"
-      wrapperStyle={{}}
-      wrapperClass="MagnifyingGlass-wrapper"
-      glassColor="#c0efff"
-      color="#2326c7"
-    />
-  </Box>
-);
+  visible={true}
+  height="100"
+  width="100"
+  ariaLabel="MagnifyingGlass-loading"
+  wrapperStyle={{}}
+  wrapperClass="MagnifyingGlass-wrapper"
+  glassColor = '#c0efff'
+  color = '#2326c7'
+/>
+</Box>);
 
 export const SpinerDel = () => (
   <Circles
@@ -52,7 +46,7 @@ export const SpinerDel = () => (
   />
 );
 
-export const LoadAdd = () => (
+export const LoadAdd = () =>
   <Hourglass
     visible={true}
     height="30"
@@ -61,5 +55,4 @@ export const LoadAdd = () => (
     wrapperStyle={{}}
     wrapperClass=""
     colors={['#ffffff', '#d4d6da']}
-  />
-);
+  />;
