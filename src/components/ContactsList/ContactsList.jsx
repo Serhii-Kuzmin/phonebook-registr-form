@@ -1,45 +1,49 @@
-import { ContactListStyle, ContactItemStyle } from './ContactsList.styled';
-import { ButtonStyle } from 'components/App.styled';
-import { getFilter } from '../../redux/filterSlice';
+import { selectFilter } from 'redux/filterSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { getPhoneBookValue } from '../../redux/phoneBookSlice';
-import {
-  delContactThunk,
-  getContactsThunk,
-} from '../../redux/services/fetchContacts';
-import { useEffect } from 'react';
+import { selectPhoneBookValue } from 'redux/phoneBook/phoneSelector';
+import { getContactsThunk } from 'services/fetchContacts';
+import { useEffect, useState } from 'react';
+import * as React from 'react';
+import { Box, List, Typography, Avatar } from '@mui/material';
+import ImportContactsIcon from '@mui/icons-material/ImportContacts';
+import { Loader } from 'components/Loader/Loader';
+import { ContactItem } from './ContactItem';
+import { avatarStyle } from 'pages/StylePages';
+import { boxListStyle } from './StyleContactLisr';
 
 export const ContactsList = () => {
   const dispatch = useDispatch();
+  const [load, setLoad] = useState(true);
+  const phoneBook = useSelector(selectPhoneBookValue);
+  const filterPhoneBook = useSelector(selectFilter);
+
+  useEffect(() => {
+    setLoad(false);
+  }, []);
 
   useEffect(() => {
     dispatch(getContactsThunk());
   }, [dispatch]);
-
-  const phoneBook = useSelector(getPhoneBookValue);
-  const filterPhoneBook = useSelector(getFilter);
 
   const lowerFilter = filterPhoneBook.toLowerCase();
   const visibleContacts = phoneBook.filter(({ name }) =>
     name.toLowerCase().includes(lowerFilter)
   );
 
-  const deleteContact = contactId => {
-    dispatch(delContactThunk(contactId));
-  };
-
   return (
-    <ContactListStyle>
-      {visibleContacts.map(({ name, number, id }) => (
-        <ContactItemStyle key={id}>
-          <p>
-            {name}: {number}
-          </p>
-          <ButtonStyle type="button" onClick={() => deleteContact(id)}>
-            Delete
-          </ButtonStyle>
-        </ContactItemStyle>
-      ))}
-    </ContactListStyle>
+    <Box sx={boxListStyle}>
+      <Avatar sx={avatarStyle}>
+        <ImportContactsIcon />
+      </Avatar>
+      <Typography component="h1" variant="h5">
+        Your Contacts
+      </Typography>
+      {load && <Loader />}
+      <List sx={{ width: 396 }}>
+        {visibleContacts.map(contact => (
+          <ContactItem contact={contact} key={contact.id} />
+        ))}
+      </List>
+    </Box>
   );
 };
