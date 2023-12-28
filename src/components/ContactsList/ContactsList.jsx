@@ -35,7 +35,7 @@ export const ContactsList = () => {
       <Avatar sx={avatarStyle}>
         <ImportContactsIcon />
       </Avatar>
-      <Typography component="h1" variant="h5">
+      <Typography color="white" component="h1" variant="h5">
         Your Contacts
       </Typography>
       {load && <Loader />}

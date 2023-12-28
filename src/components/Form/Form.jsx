@@ -81,7 +81,7 @@ export const Form = () => {
       <Avatar sx={avatarStyle}>
         <ContactsIcon />
       </Avatar>
-      <Typography component="h1" variant="h5">
+      <Typography color="white" component="h1" variant="h5">
         Add Contact
       </Typography>
       <Box component="form" onSubmit={onSubmitAddContact} sx={{ mt: 1 }}>
@@ -115,7 +115,12 @@ export const Form = () => {
           type="submit"
           fullWidth
           variant="contained"
-          sx={{ mt: 3, mb: 2, display: 'flex', gap: 3 }}
+          sx={{
+            mt: 3,
+            mb: 2,
+            display: 'flex',
+            gap: 3,
+          }}
         >
           {add && <LoadAdd />}
           <p>Add contact</p>
