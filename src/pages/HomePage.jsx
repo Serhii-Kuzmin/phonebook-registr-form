@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Paper, Typography, Box, Button } from '@mui/material';
-import hero from 'photo/hero.jpg';
+import hero from 'photo/hero.png';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn, selectUser } from '../redux/auth/authSelector';
 import { boxMainStyle, paperMainStyle } from './StylePages';

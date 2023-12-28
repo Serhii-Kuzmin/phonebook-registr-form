@@ -1,4 +1,4 @@
-export const paperMainStyle = (photo) => ({
+export const paperMainStyle = photo => ({
   position: 'relative',
   backgroundColor: 'grey',
   color: '#fff',
@@ -8,7 +8,7 @@ export const paperMainStyle = (photo) => ({
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'bottom',
   backgroundImage: `url(${photo})`,
-  minHeight: 450,
+  minHeight: 800,
 });
 
 export const boxMainStyle = {
@@ -17,7 +17,7 @@ export const boxMainStyle = {
   pr: { md: 0 },
 };
 
-export const containerContactsStyle = (photo) => ({
+export const containerContactsStyle = photo => ({
   position: 'relative',
   backgroundColor: 'grey.300',
   color: '#0c0808',
@@ -52,11 +52,10 @@ export const boxBottomFStyle = {
   display: 'flex',
   justifyContent: 'center',
   mb: 4,
-  alignItems: 'center'
+  alignItems: 'center',
 };
 
 export const avatarStyle = {
   m: 1,
-  bgcolor: 'secondary.main'
+  bgcolor: 'secondary.main',
 };
-

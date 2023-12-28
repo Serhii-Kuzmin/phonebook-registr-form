@@ -36,7 +36,6 @@ export const Filter = () => {
         value={filterPhoneBook}
         title="Enter the name"
         onChange={onChangeFilter}
-        // pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
       />
     </Box>
   );
