@@ -4,11 +4,9 @@ import { selectPhoneBookValue } from '../../redux/phoneBook/phoneSelector';
 import { getContactsThunk } from 'services/fetchContacts';
 import { useEffect, useState } from 'react';
 import * as React from 'react';
-import { Box, List, Typography, Avatar } from '@mui/material';
-import ImportContactsIcon from '@mui/icons-material/ImportContacts';
+import { Box, List, Typography } from '@mui/material';
 import { Loader } from 'components/Loader/Loader';
 import { ContactItem } from './ContactItem';
-import { avatarStyle } from 'pages/StylePages';
 import { boxListStyle } from './StyleContactLisr';
 
 export const ContactsList = () => {
@@ -32,9 +30,6 @@ export const ContactsList = () => {
 
   return (
     <Box sx={boxListStyle}>
-      <Avatar sx={avatarStyle}>
-        <ImportContactsIcon />
-      </Avatar>
       <Typography color="white" component="h1" variant="h5">
         Your Contacts
       </Typography>

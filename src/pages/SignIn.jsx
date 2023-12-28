@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { postLogInThunk } from 'services/fetchAuth';
 import {
-  Avatar,
   Button,
   CssBaseline,
   TextField,
@@ -11,8 +10,7 @@ import {
   Container,
   Typography,
 } from '@mui/material';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import { avatarStyle, boxFormStyle } from './StylePages';
+import { boxFormStyle } from './StylePages';
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
@@ -44,9 +42,6 @@ export default function SignIn() {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <Box sx={boxFormStyle}>
-        <Avatar sx={avatarStyle}>
-          <LockOutlinedIcon />
-        </Avatar>
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>

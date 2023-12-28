@@ -7,10 +7,9 @@ import {
   selectPhoneBookValue,
 } from '../../redux/phoneBook/phoneSelector';
 import { postContactThunk } from 'services/fetchContacts';
-import { Avatar, Button, TextField, Box, Typography } from '@mui/material';
-import ContactsIcon from '@mui/icons-material/Contacts';
+import { Button, TextField, Box, Typography } from '@mui/material';
+
 import { LoadAdd } from 'components/Loader/Loader';
-import { avatarStyle } from 'pages/StylePages';
 
 export const options = {
   width: '400px',
@@ -78,9 +77,6 @@ export const Form = () => {
 
   return (
     <>
-      <Avatar sx={avatarStyle}>
-        <ContactsIcon />
-      </Avatar>
       <Typography color="white" component="h1" variant="h5">
         Add Contact
       </Typography>
