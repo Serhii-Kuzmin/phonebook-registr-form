@@ -10,8 +10,7 @@ import {
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { postUserThunk } from 'services/fetchAuth';
-import { boxBottomFStyle, boxFormStyle } from './StylePages';
-import { StyledNavLink } from 'components/Navigation/StyleNav';
+import { boxFormStyle } from './StylePages';
 
 export default function SignUp() {
   const [name, setName] = useState('');
@@ -54,15 +53,12 @@ export default function SignUp() {
         <Box component="form" onSubmit={onSubmitUser} sx={{ mt: 1 }}>
           <TextField
             margin="normal"
-            helperText="The name must contain only letters, apostrophes, hyphens and indents."
             inputProps={{
               inputMode: 'text',
-              pattern: '^[a-zA-Zа-яА-Я]+(([a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$',
             }}
             autoComplete="name"
             name="name"
             value={name}
-            pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             required
             fullWidth
             label="Name"
@@ -72,13 +68,11 @@ export default function SignUp() {
           <TextField
             margin="normal"
             required
-            helperText="Please enter a valid email address"
             fullWidth
             id="email"
             label="Email Address"
             type="email"
             name="email"
-            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
             value={email}
             autoComplete="email"
             onChange={onChangeInput}
@@ -103,11 +97,6 @@ export default function SignUp() {
           >
             Sign Up
           </Button>
-          <Box sx={boxBottomFStyle}>
-            <StyledNavLink to="/login">
-              Already have an account? Sign in
-            </StyledNavLink>
-          </Box>
         </Box>
       </Box>
     </Container>

@@ -97,7 +97,6 @@ export const Form = () => {
         />
         <TextField
           sx={{ backgroundColor: 'rgba(208, 224, 241, 0.822)' }}
-          inputProps={{ inputMode: 'tel', pattern: '[0-9]*' }}
           margin="normal"
           fullWidth
           label="Phone number"
