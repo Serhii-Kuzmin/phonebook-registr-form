@@ -48,7 +48,6 @@ export const Form = () => {
     }
     setAdd(true);
     dispatch(postContactThunk(newObj));
-    // reset();
   };
 
   const isNameNew = (phoneBook, newObj) => {
@@ -88,10 +87,8 @@ export const Form = () => {
       <Box component="form" onSubmit={onSubmitAddContact} sx={{ mt: 1 }}>
         <TextField
           sx={{ backgroundColor: 'rgba(208, 224, 241, 0.822)' }}
-          // Validation
           inputProps={{
             inputMode: 'text',
-            pattern: '^[a-zA-Zа-яА-Я]+(([a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$',
           }}
           margin="normal"
           fullWidth
@@ -99,12 +96,10 @@ export const Form = () => {
           type="text"
           name="name"
           value={name}
-          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
           onChange={onChangeInput}
         />
         <TextField
-          // Validation
           sx={{ backgroundColor: 'rgba(208, 224, 241, 0.822)' }}
           inputProps={{ inputMode: 'tel', pattern: '[0-9]*' }}
           margin="normal"
@@ -113,7 +108,6 @@ export const Form = () => {
           type="tel"
           name="number"
           value={number}
-          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
           onChange={onChangeInput}
         />

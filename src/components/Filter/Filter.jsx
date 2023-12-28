@@ -24,7 +24,6 @@ export const Filter = () => {
         margin="normal"
         inputProps={{
           inputMode: 'text',
-          pattern: '^[a-zA-Zа-яА-Я]+(([a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$',
         }}
         sx={{
           width: 324,

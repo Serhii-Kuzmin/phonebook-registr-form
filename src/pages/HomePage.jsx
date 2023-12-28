@@ -33,7 +33,7 @@ export default function HomePage() {
               color="inherit"
               gutterBottom
             >
-              Hello! I'm your phonebook.{' '}
+              Hello!{' '}
             </Typography>
             <Typography variant="h5" color="inherit" paragraph>
               Please log in to your account or register.
