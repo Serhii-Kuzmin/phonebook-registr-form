@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUser } from '../../redux/auth/authSelector';
-import avatar from './DeadPool.jpg';
+import avatar from './Grogu.png';
 import { postLogOutThunk } from 'services/fetchAuth';
 import { Avatar, Button, Toolbar } from '@mui/material';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';

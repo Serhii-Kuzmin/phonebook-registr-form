@@ -10,7 +10,7 @@ import {
 } from '../redux/phoneBook/phoneSelector';
 import { CssBaseline, Container, Box } from '@mui/material';
 import * as React from 'react';
-import contacts from 'photo/contacts.jpg';
+import contacts from 'photo/vader.png';
 import { boxContactsStyle, containerContactsStyle } from './StylePages';
 import { EmptyContactsList } from 'components/EmptyContactsList/EmptyContactsList';
 
