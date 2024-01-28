@@ -2,7 +2,7 @@
   "name": "react-homework-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Serhii-Kuzmin.github.io/goit-react-hw-08-phonebook/",
+  "homepage": "https://Serhii-Kuzmin.github.io/phonebook-registr-form/",
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
